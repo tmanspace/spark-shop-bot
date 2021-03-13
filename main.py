@@ -299,7 +299,8 @@ def send_wanted(q):
 if "HEROKU" in list(os.environ.keys()):
     logger = telebot.logger
     telebot.logger.setLevel(logging.INFO)
-
+    print('HUY1')
+    print(os.environ)
     server = Flask(__name__)
 
     @server.route("/bot", methods=['POST'])
@@ -317,5 +318,6 @@ if "HEROKU" in list(os.environ.keys()):
 else:
     # если переменной окружения HEROKU нету, значит это запуск с машины разработчика.
     # Удаляем вебхук на всякий случай, и запускаем с обычным поллингом.
+    print('Huy')
     bot.remove_webhook()
     bot.polling(none_stop=True)
