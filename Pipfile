@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 python-telegram-bot-pagination = "*"
+flask = "*"
 
 [dev-packages]
 
