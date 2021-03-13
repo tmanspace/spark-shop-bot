@@ -298,7 +298,7 @@ def send_wanted(q):
 
 print(os.environ)
 
-if "HEROKU" in list(os.environ.keys()):
+if "HEROKU" is os.environ.get('runs_on', 'No'):
     logger = telebot.logger
     telebot.logger.setLevel(logging.INFO)
     print('HUY1')
