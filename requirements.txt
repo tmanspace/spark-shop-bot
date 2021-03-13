@@ -9,3 +9,5 @@ requests==2.24.0
 six==1.15.0
 urllib3==1.25.11
 uuid==1.30
+
+Flask~=1.1.2
