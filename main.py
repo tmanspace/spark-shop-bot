@@ -296,9 +296,9 @@ def send_wanted(q):
         bot.send_message(q.message.chat.id, 'Попробуйте заново! Что-то пошло не так...', reply_markup=main_menu)
 
 
-print(os.environ)
+print(os.environ.get('runs_on'))
 
-if "HEROKU" is os.environ.get('runs_on', 'No'):
+if "HEROKU" == os.environ.get('runs_on', 'No'):
     logger = telebot.logger
     telebot.logger.setLevel(logging.INFO)
     print('HUY1')
