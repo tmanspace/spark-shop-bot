@@ -296,11 +296,12 @@ def send_wanted(q):
         bot.send_message(q.message.chat.id, 'Попробуйте заново! Что-то пошло не так...', reply_markup=main_menu)
 
 
+print(os.environ)
+
 if "HEROKU" in list(os.environ.keys()):
     logger = telebot.logger
     telebot.logger.setLevel(logging.INFO)
     print('HUY1')
-    print(os.environ)
     server = Flask(__name__)
 
     @server.route("/bot", methods=['POST'])
